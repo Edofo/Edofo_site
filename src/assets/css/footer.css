@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 5% 1%;
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+    font: normal normal normal 18px/22px Montserrat;
+}
+
+.footer div i {
+    margin: 0 10px;
+    color: #4169E1;
+    font-size: 32px;
+}
