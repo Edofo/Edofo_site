@@ -10,9 +10,9 @@ function Header(props) {
 
     return (
       <div className="header">
-          <img src={logo} alt="logo-Edofo" width="75px" height="75px"/>
+          <img href={ page === "accueil" ? "/" : null } src={logo} alt="logo-Edofo" width="75px" height="75px"/>
           <div className="header-link">
-            <a href="/" className={ page === "accueil" ? "link-active" : null}>Accueil</a>
+            <a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a>
             <a href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a>
             <a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a>
             <a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a>
