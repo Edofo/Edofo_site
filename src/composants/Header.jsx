@@ -37,6 +37,8 @@ function Header(props) {
         scale: 0
       }, style)
       .play()
+
+      // eslint-disable-next-line
     }, [])
 
     return (

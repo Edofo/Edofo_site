@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.separator {
+    margin: 300px 0;
+}
+
 .home-container {
     margin-top: 20%;
 }
