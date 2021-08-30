@@ -6,6 +6,14 @@ import '../../assets/css/home/home.css'
 
 import logo from '../../assets/img/logo/edofo.png'
 
+import PictoCaddieImg from '../../assets/img/picto/caddie.png'
+import PictoComputerImg from '../../assets/img/picto/computer.png'
+
+import cloud1Img from '../../assets/img/cloud/1.png'
+import cloud2Img from '../../assets/img/cloud/2.png'
+import cloud3Img from '../../assets/img/cloud/3.png'
+import cloud4Img from '../../assets/img/cloud/4.png'
+
 gsap.registerPlugin(ScrollTrigger)
 
 function HomeContainer() {
@@ -62,7 +70,53 @@ function HomeContainer() {
     const underline2Ref = useRef(null);
     const underline2Ref2 = useRef(null);
 
+    const cloud2 = useRef(null);
+    const caddieRef = useRef(null);
+    const cloud2Ref2 = useRef(null);
+
     useEffect(() => {
+        gsap.fromTo(cloud2Ref2.current, {
+            opacity: '0',
+            xPercent: '20'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-2"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(cloud2.current, {
+            opacity: '0',
+            xPercent: '-30'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-2"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(caddieRef.current, {
+            opacity: '0',
+            xPercent: '-10'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-2"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
         gsap.fromTo(start2.current, {
             opacity: '0',
             xPercent: '-10'
@@ -93,6 +147,18 @@ function HomeContainer() {
             width: "50%",
             duration: 1, 
         }, '-=0.7')
+        .fromTo(cloud2.current, {
+            xPercent: 0,
+        }, {
+            xPercent: 10,
+            duration: 1
+        }, '-=1.5')
+        .fromTo(cloud2Ref2.current, {
+            xPercent: 0,
+        }, {
+            xPercent: -10,
+            duration: 1
+        }, '-=1.5')
 
         // eslint-disable-next-line
     }, []);
@@ -107,7 +173,53 @@ function HomeContainer() {
     const underline3Ref = useRef(null);
     const underline3Ref2 = useRef(null);
 
+    const cloud3 = useRef(null);
+    const computerRef = useRef(null);
+    const cloud3Ref2 = useRef(null);
+
     useEffect(() => {
+        gsap.fromTo(cloud3Ref2.current, {
+            opacity: '0',
+            xPercent: '-20'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-3"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(cloud3.current, {
+            opacity: '0',
+            xPercent: '20'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-3"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(computerRef.current, {
+            opacity: '0',
+            xPercent: '-10'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-3"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
         gsap.fromTo(start3.current, {
             opacity: '0',
             xPercent: '-10'
@@ -138,6 +250,18 @@ function HomeContainer() {
             width: "50%",
             duration: 1, 
         }, '-=0.7')
+        .fromTo(cloud3.current, {
+            xPercent: 0,
+        }, {
+            xPercent: 10,
+            duration: 1
+        }, '-=1.5')
+        .fromTo(cloud3Ref2.current, {
+            xPercent: 0,
+        }, {
+            xPercent: -10,
+            duration: 1
+        }, '-=1.5')
 
         // eslint-disable-next-line
     }, []);
@@ -208,7 +332,7 @@ function HomeContainer() {
           <div className="separator"></div>
 
           <section id="home-section-2">
-              <div>
+              <div className="home-section2">
                   <div ref={start2} className="home-cat-text">
                     <h2>Vous hésitez à passer commande ?</h2>
                     <span ref={underline2Ref} className="underline"></span>
@@ -216,9 +340,10 @@ function HomeContainer() {
                     <span ref={underline2Ref2} className="underline2"></span>
                     <button onMouseEnter={() => menuTl2.play()} onMouseLeave={() => menuTl2.reverse()} ref={btn2Ref} href="contact">Voir mon portfolio</button>
                   </div>
-                  <div>
-
-                      
+                  <div className="home-cat-picto">
+                    <img className="home-img-1-1" ref={cloud2} src={cloud2Img} alt="cloud-edofo" width="50%" height="50%"></img> 
+                    <img className="home-img-1-2" ref={caddieRef} src={PictoCaddieImg} alt="caddie-edofo" width="50%" height="50%"></img> 
+                    <img className="home-img-1-3" ref={cloud2Ref2} src={cloud4Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
                   </div>
               </div>
           </section>
@@ -226,9 +351,11 @@ function HomeContainer() {
           <div className="separator"></div>
 
           <section id="home-section-3">
-              <div>
-                  <div>
-                  
+              <div className="home-section2">
+                  <div className="home-cat-picto">
+                    <img className="home-img-2-1" ref={cloud3} src={cloud2Img} alt="cloud-edofo" width="50%" height="50%"></img> 
+                    <img className="home-img-2-2" ref={computerRef} src={PictoComputerImg} alt="computer-edofo" width="50%" height="50%"></img> 
+                    <img className="home-img-2-3" ref={cloud3Ref2} src={cloud1Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
                   </div>
                   <div ref={start3} className="home-cat-text">
                     <h2>Vous avez vu les exemples de mes créations ?</h2>
@@ -256,6 +383,9 @@ function HomeContainer() {
                   </div>
               </div>
           </section>
+
+          <div className="separator"></div>
+
       </div>
     );
   }
