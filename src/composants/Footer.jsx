@@ -12,7 +12,7 @@ function Footer() {
             <i className="fab fa-twitch"></i>
           </div>
           <img src={logo} alt="logo-Edofo" width="75px" height="75px"/>
-          <div>
+          <div className="footer-email">
             <i className="far fa-envelope"></i>
             <p>lnolan.pro@gmail.com</p>
           </div>
