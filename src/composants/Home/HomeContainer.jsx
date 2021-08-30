@@ -275,7 +275,46 @@ function HomeContainer() {
     const underline4Ref = useRef(null);
     const underline4Ref2 = useRef(null);
 
+    const cloud4 = useRef(null);
+    const cloud4Ref2 = useRef(null);
+
+    const star1 = useRef(null);
+    const star2 = useRef(null);
+    const star3 = useRef(null);
+    const star4 = useRef(null);
+    const star5 = useRef(null);
+
+    const like = useRef(null);
+
     useEffect(() => {
+        gsap.fromTo(cloud4Ref2.current, {
+            opacity: '0',
+            xPercent: '20'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-2"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(cloud4.current, {
+            opacity: '0',
+            xPercent: '-30'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-2"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
         gsap.fromTo(start4.current, {
             opacity: '0',
             xPercent: '-10'
@@ -306,6 +345,48 @@ function HomeContainer() {
             width: "50%",
             duration: 1, 
         }, '-=0.7')
+        .fromTo(cloud4.current, {
+            xPercent: 0,
+        }, {
+            xPercent: -10,
+            duration: 1
+        }, '-=1.5')
+        .fromTo(cloud4Ref2.current, {
+            xPercent: 0,
+        }, {
+            xPercent: 10,
+            duration: 1
+        }, '-=1.5')
+        .fromTo(star1.current, {
+            color: 'black',
+        }, {
+            color: 'orange'
+        }, '-=1.5')
+        .fromTo(star2.current, {
+            color: 'black',
+        }, {
+            color: 'orange'
+        }, '-=1.3')
+        .fromTo(star3.current, {
+            color: 'black',
+        }, {
+            color: 'orange'
+        }, '-=1.1')
+        .fromTo(star4.current, {
+            color: 'black',
+        }, {
+            color: 'orange'
+        }, '-=0.9')
+        .fromTo(star5.current, {
+            color: 'black',
+        }, {
+            color: 'orange'
+        }, '-=0.7')
+        .fromTo(like.current, {
+            color: 'black',
+        }, {
+            color: '#4169E1'
+        }, '-=1.0')
 
         // eslint-disable-next-line
     }, []);
@@ -324,7 +405,7 @@ function HomeContainer() {
                     <span ref={underline1Ref} className="underline"></span>
                     <p>Je me présente, je me nomme Nolan LEBOUCHER, j’ai {dateNow.getFullYear() - 2003} ans, je suis né le 18 décembre 2002 à Saint-Lô. Je suis actuellement en Bachelor Concepteur Développeur / Global Programming au sein de l'école d'ingénieurs Efrei situé à Villejuif. Je suis rigoureux, très calme, j’ai acquis une très bonne maîtrise de la langue Anglaise, ce qui est primordial pour les développeurs. Je suis assez logique car pour réussir son développement il faut réussir à faire preuve de réflexion et de logique. Je suis patient, je comprends vite ce que l’on me dit.</p>
                     <span ref={underline1Ref2} className="underline2"></span>
-                    <button onMouseEnter={() => menuTl1.play()} onMouseLeave={() => menuTl1.reverse()} ref={btn1Ref} href="contact">Me contacter</button>
+                    <button onClick={() => window.location.replace('contact')} onMouseEnter={() => menuTl1.play()} onMouseLeave={() => menuTl1.reverse()} ref={btn1Ref}>Me contacter</button>
                   </div>
               </div>
           </section>
@@ -338,7 +419,7 @@ function HomeContainer() {
                     <span ref={underline2Ref} className="underline"></span>
                     <p><strong>Laissez moi vous présenter ce que j'ai déjà réalisé pour mes clients.</strong><br />Mon Portfolio vous présentera une grande majorité de ce que je réalisé pour vos demandes précises et suivant votre besoin</p>
                     <span ref={underline2Ref2} className="underline2"></span>
-                    <button onMouseEnter={() => menuTl2.play()} onMouseLeave={() => menuTl2.reverse()} ref={btn2Ref} href="contact">Voir mon portfolio</button>
+                    <button onClick={() => window.location.replace('portfolio')} onMouseEnter={() => menuTl2.play()} onMouseLeave={() => menuTl2.reverse()} ref={btn2Ref}>Voir mon portfolio</button>
                   </div>
                   <div className="home-cat-picto">
                     <img className="home-img-1-1" ref={cloud2} src={cloud2Img} alt="cloud-edofo" width="50%" height="50%"></img> 
@@ -362,7 +443,7 @@ function HomeContainer() {
                     <span ref={underline3Ref} className="underline"></span>
                     <p><strong>Alors laissez moi vous guider.</strong><br />Je vais vous emmener directement vers l'endroit le plus simple pour me contacter</p>
                     <span ref={underline3Ref2} className="underline2"></span>
-                    <button onMouseEnter={() => menuTl3.play()} onMouseLeave={() => menuTl3.reverse()} ref={btn3Ref} href="portfolio">Me contacter</button>
+                    <button onClick={() => window.location.replace('contact')} onMouseEnter={() => menuTl3.play()} onMouseLeave={() => menuTl3.reverse()} ref={btn3Ref}>Me contacter</button>
                   </div>
               </div>
           </section>
@@ -370,16 +451,27 @@ function HomeContainer() {
           <div className="separator"></div>
 
           <section id="home-section-4">
-              <div>
+              <div className="home-section2">
                   <div ref={start4} className="home-cat-text">
                     <h2>Vous hésitez toujours ?</h2>
                     <span ref={underline4Ref} className="underline"></span>
                     <p><strong>Alors laissez moi vous présenter les avis de mes clients.</strong><br />Les avis de mes clients vous permettra d'avoir une idée globale du travail que je fournis</p>
                     <span ref={underline4Ref2} className="underline2"></span>
-                    <button onMouseEnter={() => menuTl4.play()} onMouseLeave={() => menuTl4.reverse()} ref={btn4Ref} href="portfolio">Voir les avis</button>
+                    <button onClick={() => window.location.replace('avis')} onMouseEnter={() => menuTl4.play()} onMouseLeave={() => menuTl4.reverse()} ref={btn4Ref}>Voir les avis</button>
                   </div>
-                  <div>
-                      
+                  <div className="home-cat-picto">
+                    <img className="home-img-3-1" ref={cloud4} src={cloud3Img} alt="cloud-edofo" width="50%" height="50%"></img> 
+                    <div className="home-subcat-picto">
+                        <div>
+                            <span ref={star1} className="fa fa-star home-star-1"></span>
+                            <span ref={star2} className="fa fa-star home-star-2"></span>
+                            <span ref={star3} className="fa fa-star home-star-3"></span>
+                            <span ref={star4} className="fa fa-star home-star-4"></span>
+                            <span ref={star5} className="fa fa-star home-star-5"></span>
+                        </div>
+                        <i ref={like} class="far fa-thumbs-up"></i>
+                    </div>
+                    <img className="home-img-3-3" ref={cloud4Ref2} src={cloud4Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
                   </div>
               </div>
           </section>

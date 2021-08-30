@@ -148,3 +148,55 @@
     width: 50%;
     height: 100%;
 }
+
+
+
+
+.home-img-3-1 {
+    position: absolute;
+    left: -20px;
+    top: -100px;
+    width: 50%;
+    height: 100%;
+}
+
+.home-subcat-picto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.home-subcat-picto span {
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.home-star-1, .home-star-5 {
+    position: relative;
+    top: 35px;
+}
+
+.home-star-2, .home-star-4 {
+    position: relative;
+    top: 15px;
+}
+
+.home-subcat-picto i {
+    font-size: 70px;
+    position: relative;
+    top: 40px;
+}
+
+.home-img-3-3 {
+    position: absolute;
+    right: 70px;
+    bottom: -50px;
+    width: 50%;
+    height: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
