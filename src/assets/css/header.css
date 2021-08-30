@@ -11,6 +11,10 @@
     margin: 10px 0 0 0;
 }
 
+.header-link {
+    display: flex;
+}
+
 .header-link a {
     position: relative;
 
@@ -44,6 +48,10 @@
 .link-active {
     color: #4169E1 !important;
     pointer-events: none !important;
+}
+
+li {
+    list-style-type: none;
 }
 
 @media screen and (max-width: 750px) {
