@@ -295,7 +295,7 @@ function HomeContainer() {
             xPercent: '0',
             duration: 1,
             scrollTrigger: {
-                trigger: document.querySelector("#home-section-2"),
+                trigger: document.querySelector("#home-section-4"),
                 start: 'top-=150 top+=400',
                 end: 'bottom center',
                 toggleActions: 'play'
@@ -309,7 +309,7 @@ function HomeContainer() {
             xPercent: '0',
             duration: 1,
             scrollTrigger: {
-                trigger: document.querySelector("#home-section-2"),
+                trigger: document.querySelector("#home-section-4"),
                 start: 'top-=150 top+=400',
                 end: 'bottom center',
                 toggleActions: 'play'
@@ -318,6 +318,90 @@ function HomeContainer() {
         gsap.fromTo(start4.current, {
             opacity: '0',
             xPercent: '-10'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-4"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(star1.current, {
+            opacity: '0',
+            xPercent: '-5'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-4"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(star2.current, {
+            opacity: '0',
+            xPercent: '-5'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-4"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(star3.current, {
+            opacity: '0',
+            xPercent: '-5'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-4"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(star4.current, {
+            opacity: '0',
+            xPercent: '-5'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-4"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(star5.current, {
+            opacity: '0',
+            xPercent: '-5'
+        }, {
+            opacity: '1',
+            xPercent: '0',
+            duration: 1,
+            scrollTrigger: {
+                trigger: document.querySelector("#home-section-4"),
+                start: 'top-=150 top+=400',
+                end: 'bottom center',
+                toggleActions: 'play'
+            }
+        })
+        gsap.fromTo(like.current, {
+            opacity: '0',
+            xPercent: '-5'
         }, {
             opacity: '1',
             xPercent: '0',
@@ -395,7 +479,7 @@ function HomeContainer() {
       <div className="home-container">
 
           <section id="home-section-1">
-              <div className="home-section">
+              <div className="home-section home-section-mobile-head">
                   <div className="home-cat-title">
                     <img src={logo} alt="logo-Edofo" width="75px" height="75px"/>
                     <h1 ref={bitTitle1Ref}>Développeur Fullstack</h1>
@@ -413,7 +497,7 @@ function HomeContainer() {
           <div className="separator"></div>
 
           <section id="home-section-2">
-              <div className="home-section2">
+              <div className="home-section2 home-section-mobile-right">
                   <div ref={start2} className="home-cat-text">
                     <h2>Vous hésitez à passer commande ?</h2>
                     <span ref={underline2Ref} className="underline"></span>
@@ -451,7 +535,7 @@ function HomeContainer() {
           <div className="separator"></div>
 
           <section id="home-section-4">
-              <div className="home-section2">
+              <div className="home-section2 home-section-mobile-right">
                   <div ref={start4} className="home-cat-text">
                     <h2>Vous hésitez toujours ?</h2>
                     <span ref={underline4Ref} className="underline"></span>

@@ -200,3 +200,25 @@
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+@media screen and (max-width: 750px) {
+    .home-cat-picto {
+        display: none;
+    }
+    .home-cat-text {
+        width: 75%;
+    }
+    .separator {
+        margin: 100px 0;
+    }
+    .home-section-mobile-right {
+        justify-content: flex-end;
+    }
+    .home-section-mobile-head {
+        display: block;
+    }
+    .home-cat-title {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
