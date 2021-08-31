@@ -41,15 +41,64 @@ function Header(props) {
       // eslint-disable-next-line
     }, [])
 
+    // burger 
+    const [menuTl] = useState(gsap.timeline({ paused: true }));
+
+    const burger1 = useRef(null)
+    const burger2 = useRef(null)
+    const burger3 = useRef(null)
+
+    const m1 = useRef(null)
+    const m2 = useRef(null)
+    const m3 = useRef(null)
+    const m4 = useRef(null)
+
+    useEffect(() => {
+      menuTl
+      .to(burger1.current, {
+        duration: 0.2,
+        rotation: 45,
+        yPercent: 290
+      })
+      .to(burger2.current, {
+        duration: 0.2,
+        opacity: 0
+      }, 0)
+      .to(burger3.current, {
+        duration: 0.2,
+        rotation: -45,
+        yPercent: -290
+      }, 0)
+      .reverse()
+
+    }, [])
+
+    const toggleMenuTimeline = () => {
+      menuTl.reversed(!menuTl.reversed());
+    };
+
     return (
-      <div className="header">
-          <img href={ page === "accueil" ? "/" : null } src={logo} alt="logo-Edofo" width="75px" height="75px"/>
-          <div className="header-link">
-            <li ref={a1}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
-            <li ref={a2}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
-            <li ref={a3}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
-            <li ref={a4}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
-          </div>
+      <div>
+        <div className="header">
+            <img href={ page === "accueil" ? "/" : null } src={logo} alt="logo-Edofo" width="75px" height="75px"/>
+            <div className="header-link header-pc">
+              <li ref={a1}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
+              <li ref={a2}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
+              <li ref={a3}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
+              <li ref={a4}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
+            </div>
+            <div onClick={() => toggleMenuTimeline()} className="header-mobile">
+              <span ref={burger1} className="header-burger"/>
+              <span ref={burger2} className="header-burger"/>
+              <span ref={burger3} className="header-burger"/>
+            </div>
+        </div>
+        <div className="header-mobile-sidebar">
+          <li ref={m1}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
+          <li ref={m2}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
+          <li ref={m3}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
+          <li ref={m4}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
+        </div>
       </div>
     );
   }
