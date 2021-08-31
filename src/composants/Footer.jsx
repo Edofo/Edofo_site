@@ -6,7 +6,7 @@ function Footer() {
 
     return (
       <div className="footer">
-          <div>
+          <div className="footer-picto">
             <i className="fab fa-discord"></i>
             <i className="fab fa-youtube"></i>
             <i className="fab fa-twitch"></i>

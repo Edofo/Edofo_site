@@ -92,6 +92,7 @@ function Header(props) {
       }, style)
       .reverse()
 
+      // eslint-disable-next-line
     }, [])
 
     const toggleMenuTimeline = () => {

@@ -553,7 +553,7 @@ function HomeContainer() {
                             <span ref={star4} className="fa fa-star home-star-4"></span>
                             <span ref={star5} className="fa fa-star home-star-5"></span>
                         </div>
-                        <i ref={like} class="far fa-thumbs-up"></i>
+                        <i ref={like} className="far fa-thumbs-up"></i>
                     </div>
                     <img className="home-img-3-3" ref={cloud4Ref2} src={cloud4Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
                   </div>

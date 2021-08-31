@@ -27,3 +27,20 @@
     color: #4169E1;
     font-size: 32px;
 }
+
+@media screen and (max-width: 750px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer-picto {
+        align-self: flex-start;
+    }
+    .footer img {
+        display: none;
+    }
+    .footer-email {
+        align-self: flex-end;
+        position: relative;
+        bottom: 0;
+    }
+}
