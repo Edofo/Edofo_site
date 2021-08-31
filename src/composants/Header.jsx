@@ -48,6 +48,8 @@ function Header(props) {
     const burger2 = useRef(null)
     const burger3 = useRef(null)
 
+    const bgm = useRef(null)
+
     const m1 = useRef(null)
     const m2 = useRef(null)
     const m3 = useRef(null)
@@ -69,6 +71,25 @@ function Header(props) {
         rotation: -45,
         yPercent: -290
       }, 0)
+      .fromTo(bgm.current, {
+        width: '0',
+        opacity: 0  
+      }, {
+        width: '100%',
+        opacity: 1
+      })
+      .fromTo(m1.current, {
+        scale: 0
+      }, style)
+      .fromTo(m2.current, {
+        scale: 0
+      }, style)
+      .fromTo(m3.current, {
+        scale: 0
+      }, style)
+      .fromTo(m4.current, {
+        scale: 0
+      }, style)
       .reverse()
 
     }, [])
@@ -93,7 +114,7 @@ function Header(props) {
               <span ref={burger3} className="header-burger"/>
             </div>
         </div>
-        <div className="header-mobile-sidebar">
+        <div ref={bgm} className="header-mobile-sidebar">
           <li ref={m1}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
           <li ref={m2}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
           <li ref={m3}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
