@@ -1,3 +1,2 @@
-Rendre responsive navbar
 Rendre responsive footer
 Rendre mieux les img du home (cloud..)
