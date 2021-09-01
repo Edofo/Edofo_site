@@ -1,0 +1,116 @@
+.contact {
+    position: relative;
+    margin: 100px 0 100px 0;
+}
+
+.contact-cloud1 {
+    position: absolute;
+    top: -150px;
+    left: 8%;
+    width: 300px;
+    height: 300px;
+    z-index: 10;
+}
+
+.contact-cloud2 {
+    position: absolute;
+    bottom: -125px;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+}
+
+.contact form {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #4169E1;
+    border-radius: 20px;
+    padding: 40px 80px;
+    z-index: 70;
+    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.contact form p {
+    color: #4169E1;
+    font: normal normal bold 36px/44px Montserrat;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.contact form label {
+    text-align: left;
+    font: normal normal bold 18px/27px Montserrat;
+    letter-spacing: 0px;
+    color: #4169E1;
+}
+
+.contact form input, .contact form textarea {
+    border: none;
+    border-radius: 2px;
+    border-bottom: 2px solid #4169E1;
+    font: normal normal normal 16px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    height: 40px;
+}
+
+.contact form textarea {
+    border-top: 2px solid #4169E1;
+    resize: vertical;
+    height: 160px;
+}
+
+.contact form button {
+    text-align: center;
+    font: normal normal bold 18px/22px Montserrat;
+    letter-spacing: 0px;
+    position: relative;
+    top: 10px;
+    padding: 15px 20px;
+    background-color: white;
+    border: 1px solid #4169E1;
+    color: #4169E1;
+    cursor: pointer;
+    text-decoration: none;
+    place-self: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .contact {
+        margin: 150px 0 15% 0;
+    }
+    .contact form {
+        margin: 0 10%;
+    }
+    .contact-cloud1 {
+        left: -50px;
+    }
+    .contact-cloud2 {
+        right: -50px;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .contact form {
+        padding: 40px 40px;
+        margin: 0;
+    }
+    .contact-cloud1, .contact-cloud2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact form {
+        padding: 30px 20px;
+    }
+}

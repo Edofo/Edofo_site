@@ -560,7 +560,7 @@ function HomeContainer() {
               </div>
           </section>
 
-          <div className="separator"></div>
+          <div className="separator2"></div>
 
       </div>
     );

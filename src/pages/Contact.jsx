@@ -1,21 +1,21 @@
 import '../assets/css/pages/home.css'
 
 import Header from "../composants/Header";
-import HomeContainer from "../composants/Home/HomeContainer";
+import ContactContainer from '../composants/Contact/ContactContainer';
 import Footer from '../composants/Footer';
 
 
-function Home() {
+function Contact() {
 
     return (
       <div>
         <div className="home-body">
-          <Header active="accueil" />
-          <HomeContainer />
-        </div>
+          <Header active="contact" />
+          <ContactContainer />
+          </div>
         <Footer />
       </div>
     );
   }
   
-  export default Home;
+  export default Contact;

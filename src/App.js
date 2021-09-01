@@ -4,6 +4,9 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+
+import Avis from "./pages/Avis";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 function App() {
@@ -11,10 +14,12 @@ function App() {
     <Router>
       <Switch>
 
-          <Route path="/about">
+          <Route path="/avis">
+            <Avis />
           </Route>
 
-          <Route path="/users">
+          <Route path="/contact">
+            <Contact />
           </Route>
 
           <Route path="/">
