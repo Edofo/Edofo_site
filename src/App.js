@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import Portfolio from "./pages/Portfolio";
 import Avis from "./pages/Avis";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -14,19 +15,23 @@ function App() {
     <Router>
       <Switch>
 
-          <Route path="/avis">
-            <Avis />
-          </Route>
+        <Route path="/portfolio">
+          <Portfolio />
+        </Route>
 
-          <Route path="/contact">
-            <Contact />
-          </Route>
+        <Route path="/avis">
+          <Avis />
+        </Route>
 
-          <Route path="/">
-            <Home />
-          </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
 
-        </Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+
+      </Switch>
     </Router>
   );
 }

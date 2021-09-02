@@ -1,4 +1,1 @@
-Rendre mieux les img du home (cloud..) (remplacer les % par des vw)
-
-Animer les picto du footer
-Clicker sur les picto du footer
+// Rendre mieux les img du home (cloud..) (remplacer les % par des vw)

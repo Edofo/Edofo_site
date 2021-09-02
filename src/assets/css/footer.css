@@ -15,6 +15,11 @@
 .footer img {
     position: absolute;
     left: 45%;
+    transition-duration: 0.5s;
+}
+
+.footer img:hover {
+    transform: rotate(360deg);
 }
 
 .footer-email {
@@ -22,10 +27,23 @@
     right: 0;
 }
 
+.footer-email a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
 .footer div i {
     margin: 0 10px;
     color: #4169E1;
     font-size: 32px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.footer div i:hover {
+    transform: scale(1.10);
 }
 
 @media screen and (max-width: 750px) {

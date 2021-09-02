@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 
 import '../../assets/css/avis/avis.css'
@@ -17,7 +17,6 @@ function AvisSeul(props) {
     const cloud1Ref = useRef(null)
     const cloud2Ref = useRef(null)
 
-
     useEffect(() => {
       isOdd(props.cloud) === 1 ?
         gsap.fromTo(document.querySelector(`#avis-container-${props.id}`), {
@@ -30,6 +29,7 @@ function AvisSeul(props) {
             scrollTrigger: {
                 trigger: document.querySelector(`#avis-container-${props.id}`),
                 start: 'top-=50 top+=400',
+                end: 'bottom center',
                 toggleActions: 'play',
             }
         })
@@ -47,6 +47,8 @@ function AvisSeul(props) {
               toggleActions: 'play',
           }
       })
+
+      
       // eslint-disable-next-line
     }, [])
 

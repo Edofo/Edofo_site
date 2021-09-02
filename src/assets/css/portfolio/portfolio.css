@@ -1,0 +1,122 @@
+.portfolio {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+.exemple-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    opacity: 0;
+}
+
+.exemple-text {
+    position: relative;
+}
+
+.exemple-title {
+    font: normal normal bold 24px/32px Montserrat;
+    color: #4169E1;
+    margin-bottom: 15px;
+}
+
+.exemple-desc {
+    margin: 10px 0;
+}
+
+.underline {
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4169E1;
+}
+
+.underline2 {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4169E1;
+}
+
+.exemple-text button, .portfolio button {
+    text-align: center;
+    font: normal normal bold 18px/22px Montserrat;
+    position: relative;
+    top: 10px;
+    padding: 15px 20px;
+    background-color: white;
+    border: 1px solid #4169E1;
+    color: #4169E1;
+    cursor: pointer;
+    text-decoration: none;
+    place-self: center;
+    margin-top: 15px;
+}
+
+.exemple-screen {
+    position: relative;
+}
+
+.exemple-bg {
+    position: absolute;
+    top: 31px;
+    left: 65px;
+    width: 268px;
+    height: 153px;
+}
+
+@media screen and (max-width: 1100px) {
+    .exemple-mac {
+        width: 300px;
+    } 
+    .exemple-bg {
+        top: 24px;
+        left: 49px;
+        width: 200px;
+        height: 114px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .exemple-mac {
+        width: 200px;
+    }
+    .exemple-bg {
+        top: 15px;
+        left: 33px;
+        width: 135px;
+        height: 77px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .exemple-container {
+        flex-direction: column;
+    }
+    .exemple-container-mobile {
+        flex-direction: column-reverse !important;
+    }
+
+    .exemple-mac {
+        width: 300px;
+    }
+    .exemple-bg {
+        top: 24px;
+        left: 49px;
+        width: 200px;
+        height: 114px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .exemple-container {
+        text-align: center;
+    }
+}
