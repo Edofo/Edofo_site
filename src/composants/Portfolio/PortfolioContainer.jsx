@@ -4,44 +4,48 @@ import { gsap } from "gsap";
 import '../../assets/css/portfolio/portfolio.css'
 import PortfolioSeul from './PortfolioSeul';
 
+import exemple1 from '../../assets/img/exemple/exemple1.png'
+import exemple2 from '../../assets/img/exemple/exemple2.png'
+
+import exemple3 from '../../assets/img/exemple/exemple3.png'
+
+import exemple4 from '../../assets/img/exemple/exemple4.png'
+import exemple5 from '../../assets/img/exemple/exemple5.png'
+
+import exemple6 from '../../assets/img/exemple/exemple6.png'
+import exemple7 from '../../assets/img/exemple/exemple7.png'
+
 function PortfolioContainer() {
 
 
   const listExemple = [
     {
       title: "Tunnel Standard | Color Telecom",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: "https://commande.standardenligne.fr"
+      desc: "Le site est un tunnel de vente pour vendre des standard virtuel. Accompagné d'un système pour envoyer un formulaire de config pour son standard. Les APIs utilisées sont: Stripe (Carte Bancaire) / GoCardLess (Prélèvement Bancaire) / Paypal / NewTech (Stockage des numéros) / Logisav (Gestion des factures clients).",
+      website: "https://commande.standardenligne.fr",
+      exemple1: exemple1,
+      exemple2: exemple2
     },
     {
       title: "Panel Admin | Color Telecom",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: false
+      desc: "Le site est un panel admin permettant de géré les informations du tunnel standard. Ainsi que de pouvoir envoyer des SMS aux clients qui n'ont pas payés leurs factures. Les APIs utilisées sont: API du tunnel / Mtarget (pour l'envoi des SMS).",
+      website: false,
+      exemple1: exemple3,
+      exemple2: false
     },
     {
-      title: "Nom Client/Entreprise",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: "https://exemple.com"
+      title: "Edofo TV | Site Perso",
+      desc: "Le site a été réalisé par plaisir dans mes débuts de développement. Il requete les APIs de Youtube et Twitch.",
+      website: "https://edofotv.w2.cmws.fr",
+      exemple1: exemple4,
+      exemple2: exemple5
     },
     {
-      title: "Nom Client/Entreprise",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: "https://exemple.com"
-    },
-    {
-      title: "Nom Client/Entreprise",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: "https://exemple.com"
-    },
-    {
-      title: "Nom Client/Entreprise",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: "https://exemple.com"
-    },
-    {
-      title: "Nom Client/Entreprise",
-      desc: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-      website: "https://exemple.com"
+      title: "LyraCraft RP | Site Perso",
+      desc: "Le site est un site pour un projet perso, qui est LyraCraft Roleplay. Ce site a été également développé dans mes débuts",
+      website: "https://lyracraft.fr",
+      exemple1: exemple7,
+      exemple2: exemple6
     },
   ]
 
@@ -100,7 +104,7 @@ function PortfolioContainer() {
       {
         listExempleState.map((x, i) => {
           return (
-            <PortfolioSeul key={i} id={i} cloud={i} title={x.title} desc={x.desc} website={x.website} />
+            <PortfolioSeul key={i} id={i} cloud={i} title={x.title} desc={x.desc} website={x.website} exemple1={x.exemple1} exemple2={x.exemple2}/>
           )
         })
       }

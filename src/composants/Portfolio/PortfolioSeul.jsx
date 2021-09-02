@@ -1,16 +1,9 @@
 import { gsap } from "gsap";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import '../../assets/css/portfolio/portfolio.css'
 
-import cloud1Img from '../../assets/img/cloud/1.png'
-import cloud2Img from '../../assets/img/cloud/2.png'
-import cloud3Img from '../../assets/img/cloud/3.png'
-import cloud4Img from '../../assets/img/cloud/4.png'
-
 import computer from '../../assets/img/computer.png'
-
-import exemple1 from '../../assets/img/exemple/exemple1.png'
 
 function PortfolioSeul(props) {
 
@@ -21,6 +14,9 @@ function PortfolioSeul(props) {
   const classExemple = isOdd(props.id) === 0 ? `exemple-container` : `exemple-container exemple-container-mobile`
 
   const idExemple = `exemple-container-${props.id}`
+
+  const idExemple1 = `exemple-img-${props.id}`
+  const idExemple2 = `exemple-img2-${props.id}`
 
   const idUnderline1 = `exemple-underline1-${props.id}`
   const idUnderline2 = `exemple-underline2-${props.id}`
@@ -74,6 +70,12 @@ function PortfolioSeul(props) {
         width: "50%",
         duration: 1, 
     }, '-=0.7')
+    .fromTo(document.querySelector(`#exemple-img2-${props.id}`), {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      duration: 1.5
+    }, '-=1')
     // eslint-disable-next-line
   }, [])
 
@@ -94,7 +96,13 @@ function PortfolioSeul(props) {
   const part2 =
     <div className="exemple-screen">
       <img src={computer} className="exemple-mac" alt="computer-edofo" width="400px" height="100%" />
-      <img src={exemple1} className="exemple-bg"  alt="exemple-edofo" width="300px" height="175px" />
+      {
+        props.website === false ?
+          null
+        :
+          <img id={idExemple2} src={props.exemple2} className="exemple-bg exemple-bg-2"  alt="exemple-edofo" width="300px" height="175px" />
+      }
+      <img id={idExemple1} src={props.exemple1} className="exemple-bg"  alt="exemple-edofo" width="300px" height="175px" />
     </div>
 
   return (
