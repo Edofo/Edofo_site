@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from "gsap";
+import emailjs from 'emailjs-com';
 
 import '../../assets/css/contact/contact.css'
 
@@ -60,22 +61,24 @@ function ContactContainer() {
   const [client, setClient] = useState("")
   const [desc, setDesc] = useState("")
 
-  const sendEmail = (e) => {
-    e.preventDefault()
-
-    const message = new FormData()
+  const sendEmail = () => {
 
     if(email !== "" && client !== "" && desc !== "") {
-      message.append("email", email)
-      message.append("client", client)
-      message.append("body", desc)
-
-      const options = {
-        method: "post",
-        body: message
+     
+      const params = {
+        client: client,
+        email: email,
+        body: desc
       }
 
-      fetch()
+      emailjs.init('user_GxrzHM20XGsxuTbRkA6Pg');
+
+      emailjs.send('service_17hkypn','template_7cyil0m', params)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(err) {
+        console.log('FAILED...', err);
+      });
 
     } else {
       console.log("Il y a un problème dans le remplissage du formulaire !")
@@ -90,18 +93,18 @@ function ContactContainer() {
         <form ref={formRef}>
           <p>Formulaire de contact</p>
           <div className="contact-form">
-            <label for="email">Email :</label>
-            <input type="text" id="email" name="email" />
+            <label>Email :</label>
+            <input onChange={(val) => setEmail(val.target.value)} value={email} type="text" id="email" name="email" />
           </div>
           <div className="contact-form">
-            <label for="client">Nom Client/Entreprise :</label>
-            <input type="text" id="client" name="name" />
+            <label>Nom Client/Entreprise :</label>
+            <input onChange={(val) => setClient(val.target.value)} value={client} type="text" id="client" name="name" />
           </div>
           <div className="contact-form">
-            <label for="description">Description :</label>
-            <textarea type="text" id="description" name="description" />
+            <label>Description :</label>
+            <textarea onChange={(val) => setDesc(val.target.value)} value={desc} type="text" id="description" name="description" />
           </div>
-          <button onClick={() => sendEmail()} onMouseEnter={() => Tl.play()} onMouseLeave={() => Tl.reverse()} ref={btnRef}>Me contacter</button>
+          <button type="button" onClick={() => sendEmail()} onMouseEnter={() => Tl.play()} onMouseLeave={() => Tl.reverse()} ref={btnRef}>Me contacter</button>
         </form>
 
         <img ref={cloud2Ref} className="contact-cloud2" style={{transform: 'scaleX(-1)'}} src={cloud4Img} alt="cloud-edofo" width="25vw" height="25vw"/>
