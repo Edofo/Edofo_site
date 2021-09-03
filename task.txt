@@ -1,1 +1,4 @@
-// Rendre mieux les img du home (cloud..) (remplacer les % par des vw)
+Rendre mieux les img du home (cloud...) (remplacer les % par des px)
+Espacement des lignes dans les paragraphes
+
+Téléphone (iphone) => Page portfolio mac bugé
