@@ -506,9 +506,9 @@ function HomeContainer() {
                     <button onClick={() => window.location.replace('portfolio')} onMouseEnter={() => menuTl2.play()} onMouseLeave={() => menuTl2.reverse()} ref={btn2Ref}>Voir mon portfolio</button>
                   </div>
                   <div className="home-cat-picto">
-                    <img className="home-img-1-1" ref={cloud2} src={cloud2Img} alt="cloud-edofo" width="50%" height="50%"></img> 
-                    <img className="home-img-1-2" ref={caddieRef} src={PictoCaddieImg} alt="caddie-edofo" width="50%" height="50%"></img> 
-                    <img className="home-img-1-3" ref={cloud2Ref2} src={cloud4Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
+                    <img className="home-img-1-1" ref={cloud2} src={cloud2Img} alt="cloud-edofo" width="250px" height="250px"></img> 
+                    <img className="home-img-1-2" ref={caddieRef} src={PictoCaddieImg} alt="caddie-edofo" width="200px" height="200px"></img> 
+                    <img className="home-img-1-3" ref={cloud2Ref2} src={cloud4Img} alt="cloud-edofo" width="200px" height="200px"></img>                                           
                   </div>
               </div>
           </section>
@@ -518,9 +518,9 @@ function HomeContainer() {
           <section id="home-section-3">
               <div className="home-section2">
                   <div className="home-cat-picto">
-                    <img className="home-img-2-1" ref={cloud3} src={cloud2Img} alt="cloud-edofo" width="50%" height="50%"></img> 
-                    <img className="home-img-2-2" ref={computerRef} src={PictoComputerImg} alt="computer-edofo" width="50%" height="50%"></img> 
-                    <img className="home-img-2-3" ref={cloud3Ref2} src={cloud1Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
+                    <img className="home-img-2-1" ref={cloud3} src={cloud2Img} alt="cloud-edofo" width="300px" height="300px"></img> 
+                    <img className="home-img-2-2" ref={computerRef} src={PictoComputerImg} alt="computer-edofo" width="275px" height="275px"></img> 
+                    <img className="home-img-2-3" ref={cloud3Ref2} src={cloud1Img} alt="cloud-edofo" width="225px" height="225px"></img>                                           
                   </div>
                   <div ref={start3} className="home-cat-text">
                     <h2>Vous avez vu les exemples de mes créations ?</h2>
@@ -544,7 +544,7 @@ function HomeContainer() {
                     <button onClick={() => window.location.replace('avis')} onMouseEnter={() => menuTl4.play()} onMouseLeave={() => menuTl4.reverse()} ref={btn4Ref}>Voir les avis</button>
                   </div>
                   <div className="home-cat-picto">
-                    <img className="home-img-3-1" ref={cloud4} src={cloud3Img} alt="cloud-edofo" width="50%" height="50%"></img> 
+                    <img className="home-img-3-1" ref={cloud4} src={cloud3Img} alt="cloud-edofo" width="250px" height="250px"></img> 
                     <div className="home-subcat-picto">
                         <div>
                             <span ref={star1} className="fa fa-star home-star-1"></span>
@@ -555,7 +555,7 @@ function HomeContainer() {
                         </div>
                         <i ref={like} className="far fa-thumbs-up"></i>
                     </div>
-                    <img className="home-img-3-3" ref={cloud4Ref2} src={cloud4Img} alt="cloud-edofo" width="50%" height="50%"></img>                                           
+                    <img className="home-img-3-3" ref={cloud4Ref2} src={cloud4Img} alt="cloud-edofo" width="200px" height="200px"></img>                                           
                   </div>
               </div>
           </section>
