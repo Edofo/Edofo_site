@@ -3,7 +3,7 @@ Opti les gsap
 Page portfolio Téléphone (iphone) pour montrer les applis
 Page portfolio mac bugé (a voir si cela continue)
 
-Service Worker
+Service Worker continuer
 
 Header fond blanc
 

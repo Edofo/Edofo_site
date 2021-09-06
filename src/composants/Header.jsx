@@ -14,7 +14,7 @@ const Header = (props) => {
     const a3 = useRef(null)
     const a4 = useRef(null)
 
-    const style = {
+    let style = {
       scale: 1,
       duration: 0.25,
       stagger: 0.1,
@@ -55,18 +55,20 @@ const Header = (props) => {
     const m3 = useRef(null)
     const m4 = useRef(null)
 
+    const mRef = [ useRef(), useRef(), useRef(), useRef() ]
+
     useEffect(() => {
       menuTl
-      .to(burger1.current, {
+      .to("#header-burger-1", {
         duration: 0.2,
         rotation: 45,
         yPercent: 290
       })
-      .to(burger2.current, {
+      .to("#header-burger-2", {
         duration: 0.2,
         opacity: 0
       }, 0)
-      .to(burger3.current, {
+      .to("#header-burger-3", {
         duration: 0.2,
         rotation: -45,
         yPercent: -290
@@ -78,18 +80,15 @@ const Header = (props) => {
         width: '100%',
         opacity: 1
       })
-      .fromTo(m1.current, {
-        scale: 0
-      }, style)
-      .fromTo(m2.current, {
-        scale: 0
-      }, style)
-      .fromTo(m3.current, {
-        scale: 0
-      }, style)
-      .fromTo(m4.current, {
-        scale: 0
-      }, style)
+      mRef.forEach((x) => {
+        menuTl
+        .fromTo(x.current, {
+          scale: 0
+        }, {
+          ...style
+        })
+      })
+      menuTl
       .reverse()
 
       // eslint-disable-next-line
@@ -110,16 +109,16 @@ const Header = (props) => {
               <li ref={a4}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
             </div>
             <div onClick={() => toggleMenuTimeline()} className="header-mobile">
-              <span ref={burger1} className="header-burger"/>
-              <span ref={burger2} className="header-burger"/>
-              <span ref={burger3} className="header-burger"/>
+              <span id="header-burger-1" className="header-burger"/>
+              <span id="header-burger-2" className="header-burger"/>
+              <span id="header-burger-3" className="header-burger"/>
             </div>
         </div>
         <div ref={bgm} className="header-mobile-sidebar">
-          <li ref={m1}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
-          <li ref={m2}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
-          <li ref={m3}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
-          <li ref={m4}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
+          <li ref={mRef[0]}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
+          <li ref={mRef[1]}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
+          <li ref={mRef[2]}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
+          <li ref={mRef[3]}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
         </div>
       </div>
     );
