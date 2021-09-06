@@ -15,7 +15,7 @@ import exemple5 from '../../assets/img/exemple/exemple5.png'
 import exemple6 from '../../assets/img/exemple/exemple6.png'
 import exemple7 from '../../assets/img/exemple/exemple7.png'
 
-function PortfolioContainer() {
+const PortfolioContainer = () => {
 
 
   const listExemple = [

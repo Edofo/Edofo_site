@@ -5,7 +5,7 @@ import '../assets/css/header.css'
 
 import logo from '../assets/img/logo/edofo.png'
 
-function Header(props) {
+const Header = (props) => {
 
     const[page] = useState(props.active)
 

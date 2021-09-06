@@ -1,11 +1,14 @@
-import { gsap } from "gsap";
 import { useEffect, useState } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import '../../assets/css/portfolio/portfolio.css'
 
 import computer from '../../assets/img/computer.png'
 
-function PortfolioSeul(props) {
+gsap.registerPlugin(ScrollTrigger)
+
+const PortfolioSeul = (props) => {
 
   function isOdd(num) { return num % 2;}
 
@@ -74,7 +77,7 @@ function PortfolioSeul(props) {
       opacity: 0,
     }, {
       opacity: 1,
-      duration: 1.5
+      duration: 1
     }, '-=1')
     // eslint-disable-next-line
   }, [])

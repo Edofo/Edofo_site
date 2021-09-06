@@ -5,7 +5,7 @@ import ContactContainer from '../composants/Contact/ContactContainer';
 import Footer from '../composants/Footer';
 
 
-function Contact() {
+const Contact = () => {
 
     return (
       <div>

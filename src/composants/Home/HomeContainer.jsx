@@ -16,7 +16,7 @@ import cloud4Img from '../../assets/img/cloud/4.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function HomeContainer() {
+const HomeContainer = () => {
 
     const dateNow = new Date()
 

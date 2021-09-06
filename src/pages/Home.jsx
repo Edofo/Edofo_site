@@ -5,7 +5,7 @@ import HomeContainer from "../composants/Home/HomeContainer";
 import Footer from '../composants/Footer';
 
 
-function Home() {
+const Home = () => {
 
     return (
       <div>

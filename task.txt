@@ -1,8 +1,4 @@
-Espacement des lignes dans les paragraphes
-Text left en mobile (< 900)
-
-Rendre responsive les img du home (1100px = section 3 || 900 et en dessous = tous)
-
-Téléphone (iphone) => Page portfolio mac bugé
+Page portfolio Téléphone (iphone) pour montrer les applis
+Page portfolio mac bugé
 
 Rajouter une popup email envoyé

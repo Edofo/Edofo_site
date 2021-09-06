@@ -5,7 +5,7 @@ import '../../assets/css/avis/avis.css'
 
 import AvisSeul from './AvisSeul';
 
-function AvisContainer() {
+const AvisContainer = () => {
 
     const listAvis = [
       {

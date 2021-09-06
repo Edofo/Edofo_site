@@ -5,7 +5,7 @@ import PortfolioContainer from '../composants/Portfolio/PortfolioContainer';
 import Footer from '../composants/Footer';
 
 
-function Portfolio() {
+const Portfolio = () => {
 
     return (
       <div>

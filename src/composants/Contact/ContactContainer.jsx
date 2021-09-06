@@ -7,7 +7,7 @@ import '../../assets/css/contact/contact.css'
 import cloud2Img from '../../assets/img/cloud/2.png'
 import cloud4Img from '../../assets/img/cloud/4.png'
 
-function ContactContainer() {
+const ContactContainer = () => {
 
   const [Tl] = useState(gsap.timeline({ paused: true }));
 

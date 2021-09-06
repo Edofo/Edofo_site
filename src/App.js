@@ -1,37 +1,43 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 
-import Portfolio from "./pages/Portfolio";
-import Avis from "./pages/Avis";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
+const Portfolio = lazy(() => import("./pages/Portfolio"))
+const Avis = lazy(() => import("./pages/Avis"))
+const Contact = lazy(() => import("./pages/Contact"))
+const Home = lazy(() => import("./pages/Home"))
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Switch>
+      
+      <Suspense fallback={<div></div>}>
+    
+        <Switch>
 
-        <Route path="/portfolio">
-          <Portfolio />
-        </Route>
+          <Route path="/portfolio">
+            <Portfolio />
+          </Route>
 
-        <Route path="/avis">
-          <Avis />
-        </Route>
+          <Route path="/avis">
+            <Avis />
+          </Route>
 
-        <Route path="/contact">
-          <Contact />
-        </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
 
-        <Route path="/">
-          <Home />
-        </Route>
+          <Route path="/">
+            <Home />
+          </Route>
 
-      </Switch>
+        </Switch>
+
+      </Suspense>
+
     </Router>
   );
 }

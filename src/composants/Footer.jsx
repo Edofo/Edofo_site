@@ -2,7 +2,7 @@ import '../assets/css/footer.css'
 
 import logo from '../assets/img/logo/edofo.png'
 
-function Footer() {
+const Footer = () => {
 
     return (
       <div className="footer">

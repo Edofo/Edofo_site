@@ -5,7 +5,7 @@ import AvisContainer from '../composants/Avis/AvisContainer';
 import Footer from '../composants/Footer';
 
 
-function Avis() {
+const Avis = () => {
 
     return (
       <div>

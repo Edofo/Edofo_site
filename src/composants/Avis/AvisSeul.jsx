@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import '../../assets/css/avis/avis.css'
 
@@ -8,7 +9,9 @@ import logo from '../../assets/img/logo/edofo.png'
 import cloud1Img from '../../assets/img/cloud/1.png'
 import cloud2Img from '../../assets/img/cloud/2.png'
 
-function AvisSeul(props) {
+gsap.registerPlugin(ScrollTrigger)
+
+const AvisSeul = (props) => {
   
     function isOdd(num) { return num % 2;}
 
