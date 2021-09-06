@@ -7,9 +7,9 @@ const Footer = () => {
     return (
       <div className="footer">
           <div className="footer-picto">
-            <a target="t_blank" href="https://discord.gg/Mks7DsjCkT" ><i className="fab fa-discord"></i></a>
-            <a target="t_blank" href="https://www.youtube.com/c/EdofoML"><i className="fab fa-youtube"></i></a>
-            <a target="t_blank" href="https://twitch.tv/edofo"><i className="fab fa-twitch"></i></a>
+            <a alt="discord-edofo" target="t_blank" href="https://discord.gg/Mks7DsjCkT" ><i className="fab fa-discord"></i></a>
+            <a alt="youtube-edofo" target="t_blank" href="https://www.youtube.com/c/EdofoML"><i className="fab fa-youtube"></i></a>
+            <a alt="twitch-edofo" target="t_blank" href="https://twitch.tv/edofo"><i className="fab fa-twitch"></i></a>
           </div>
           <img src={logo} alt="logo-Edofo" width="75px" height="75px"/>
           <div className="footer-email">
