@@ -61,6 +61,8 @@ const ContactContainer = () => {
   const [client, setClient] = useState("")
   const [desc, setDesc] = useState("")
 
+  const [popup] = useState(gsap.timeline({ paused: true }));
+
   const sendEmail = () => {
 
     if(email !== "" && client !== "" && desc !== "") {
@@ -76,6 +78,26 @@ const ContactContainer = () => {
       emailjs.send('service_17hkypn','template_7cyil0m', params)
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
+        popup
+        .fromTo('.contact-popup', {
+          opacity: 0
+        }, {
+          opacity: 1,
+          duration: 0.1
+        })
+        .fromTo('.contact-popup-span', {
+          width: 0
+        }, {
+          width: '120%',
+          duration: 1
+        })
+        .fromTo('.contact-popup', {
+          opacity: 1
+        }, {
+          opacity: 0,
+          duration: 0.1
+        })
+        popup.play()
       }, function(err) {
         console.log('FAILED...', err);
       });
@@ -106,6 +128,11 @@ const ContactContainer = () => {
           </div>
           <button type="button" onClick={() => sendEmail()} onMouseEnter={() => Tl.play()} onMouseLeave={() => Tl.reverse()} ref={btnRef}>Me contacter</button>
         </form>
+
+        <div className="contact-popup">
+          <p>Email envoyé !</p>
+          <span className="contact-popup-span"></span>
+        </div>
 
         <img ref={cloud2Ref} className="contact-cloud2" style={{transform: 'scaleX(-1)'}} src={cloud4Img} alt="cloud-edofo" width="25vw" height="25vw"/>
     </div>

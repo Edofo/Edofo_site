@@ -1,4 +1,4 @@
-Page portfolio Téléphone (iphone) pour montrer les applis
-Page portfolio mac bugé
+Opti les gsap
 
-Rajouter une popup email envoyé
+Page portfolio Téléphone (iphone) pour montrer les applis
+Page portfolio mac bugé (a voir si cela continue)
