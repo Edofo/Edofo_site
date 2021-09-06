@@ -9,11 +9,6 @@ const Header = (props) => {
 
     const[page] = useState(props.active)
 
-    const a1 = useRef(null)
-    const a2 = useRef(null)
-    const a3 = useRef(null)
-    const a4 = useRef(null)
-
     let style = {
       scale: 1,
       duration: 0.25,
@@ -21,21 +16,21 @@ const Header = (props) => {
       ease: 'back.out(1.7)'
     }
 
+    const tl = gsap.timeline({ paused: true })
+    
+    const aRef = [ useRef(), useRef(), useRef(), useRef() ]
+
     useEffect(() => {
-      const tl = gsap.timeline({ paused: true })
+
+      aRef.forEach((x) => {
+        tl
+        .fromTo(x.current, {
+          scale: 0
+        }, {
+          ...style
+        })
+      })
       tl
-      .fromTo(a1.current, {
-        scale: 0
-      }, style)
-      .fromTo(a2.current, {
-        scale: 0
-      }, style)
-      .fromTo(a3.current, {
-        scale: 0
-      }, style)
-      .fromTo(a4.current, {
-        scale: 0
-      }, style)
       .play()
 
       // eslint-disable-next-line
@@ -44,16 +39,7 @@ const Header = (props) => {
     // burger 
     const [menuTl] = useState(gsap.timeline({ paused: true }));
 
-    const burger1 = useRef(null)
-    const burger2 = useRef(null)
-    const burger3 = useRef(null)
-
     const bgm = useRef(null)
-
-    const m1 = useRef(null)
-    const m2 = useRef(null)
-    const m3 = useRef(null)
-    const m4 = useRef(null)
 
     const mRef = [ useRef(), useRef(), useRef(), useRef() ]
 
@@ -103,10 +89,10 @@ const Header = (props) => {
         <div className="header">
             <img href={ page === "accueil" ? "/" : null } src={logo} alt="logo-Edofo" width="75px" height="75px"/>
             <div className="header-link header-pc">
-              <li ref={a1}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
-              <li ref={a2}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
-              <li ref={a3}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
-              <li ref={a4}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
+              <li ref={aRef[0]}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
+              <li ref={aRef[1]}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>
+              <li ref={aRef[2]}><a href="portfolio" className={ page === "portfolio" ? "link-active" : null }>Portfolio</a></li>
+              <li ref={aRef[3]}><a href="contact" className={ page === "contact" ? "link-active" : null }>Contact</a></li>
             </div>
             <div onClick={() => toggleMenuTimeline()} className="header-mobile">
               <span id="header-burger-1" className="header-burger"/>
