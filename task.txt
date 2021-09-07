@@ -1,10 +1,14 @@
 / Opti les gsap
 
 Page portfolio Téléphone (iphone) pour montrer les applis
-Page portfolio mac bugé (a voir si cela continue)
+/ Page portfolio mac bugé (a voir si cela continue)
 
 // Service Worker continuer (surtour le networkReponse)
 
 Header fond blanc
 
 Modifier les pictos
+
+Convertir png en webp
+
+Reduire les tailes d'image (pixel)
