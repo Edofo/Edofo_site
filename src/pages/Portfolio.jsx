@@ -9,8 +9,8 @@ const Portfolio = () => {
 
     return (
       <div>
+        <Header active="portfolio" />
         <div className="home-body">
-          <Header active="portfolio" />
           <PortfolioContainer />
         </div>
         <Footer />

@@ -75,7 +75,12 @@ const AvisSeul = (props) => {
             <span style={ props.star >= 5 ? {color: "orange"} : {color: "black"} } className="fa fa-star"></span>
           </div>
           <p><strong>Avis :</strong> {props.avis}</p>
-          <p><strong>Site web :</strong> {props.website}</p>
+          {
+            props.website === false ?
+              null
+            :
+              <p><strong>Site web :</strong> {props.website}</p>
+          }
         </div>
         {
           isOdd(props.cloud) === 0 ?

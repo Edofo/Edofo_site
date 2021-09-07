@@ -85,7 +85,7 @@ const Header = (props) => {
     };
 
     return (
-      <div>
+      <div className="header-all">
         <div className="header">
             <img href={ page === "accueil" ? "/" : null } src={logo} alt="logo-Edofo" width="75px" height="75px"/>
             <div className="header-link header-pc">

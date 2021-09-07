@@ -7,6 +7,4 @@ Page portfolio mac bugé (a voir si cela continue)
 
 Header fond blanc
 
-Manifest faire le logo en 64x64
-
 Modifier les pictos

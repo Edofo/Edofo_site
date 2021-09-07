@@ -9,8 +9,8 @@ const Contact = () => {
 
     return (
       <div>
+        <Header active="contact" />
         <div className="home-body">
-          <Header active="contact" />
           <ContactContainer />
           </div>
         <Footer />

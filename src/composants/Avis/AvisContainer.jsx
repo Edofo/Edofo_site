@@ -9,10 +9,10 @@ const AvisContainer = () => {
 
     const listAvis = [
       {
-        client: "Nom Client/Entreprise",
-        star: 1,
-        avis: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-        website: "https://exemple.com"
+        client: "Rikka | Amis",
+        star: 5,
+        avis: "Je trouve le site que Edofo à réalisé pour son portfolio est tres ergonomique, facile de usage et plaisant à regardé ! Mais également les autres sites qu'il a pu réalisé",
+        website: false
       },
       {
         client: "Nom Client/Entreprise",
