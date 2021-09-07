@@ -41,9 +41,12 @@ self.addEventListener('fetch', (event) => {
                 try {
                     const preloadResponse = await event.preloadResponse
                     if (preloadResponse) {
+                        // cache.put(event.request, preloadResponse.clone())
                         return preloadResponse
                     }
 
+                    // const networkResponse = await fetch(event.request)
+                    // cache.put(event.request, networkResponse.clone())
                     return await fetch(event.request)
                 } catch (e) {
                     const cache = await caches.open(PREFIX);

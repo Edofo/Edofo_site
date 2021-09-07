@@ -28,7 +28,7 @@ const PortfolioSeul = (props) => {
 
   useEffect(() => {
     isOdd(props.cloud) === 1 ?
-      gsap.fromTo(document.querySelector(`#exemple-container-${props.id}`), {
+      gsap.fromTo(`#exemple-container-${props.id}`, {
           opacity: '0',
           xPercent: '-10'
       }, {
@@ -36,14 +36,14 @@ const PortfolioSeul = (props) => {
           xPercent: '0',
           duration: 1,
           scrollTrigger: {
-              trigger: document.querySelector(`#exemple-container-${props.id}`),
-              start: 'top top+=400',
+              trigger: `#exemple-container-${props.id}`,
+              start: 'top-=200 top+=400',
               end: 'bottom+=50 center',
               toggleActions: 'play',
           }
       })
     :
-      gsap.fromTo(document.querySelector(`#exemple-container-${props.id}`), {
+      gsap.fromTo(`#exemple-container-${props.id}`, {
         opacity: '0',
         xPercent: '10',
     }, {
@@ -51,29 +51,29 @@ const PortfolioSeul = (props) => {
         xPercent: '0',
         duration: 1,
         scrollTrigger: {
-            trigger: document.querySelector(`#exemple-container-${props.id}`),
-            start: 'top top+=400',
+            trigger: `#exemple-container-${props.id}`,
+            start: 'top-=200 top+=400',
             end: 'bottom+=50 center',
             toggleActions: 'play',
         }
     })
 
     Tl
-    .to(document.querySelector(`#exemple-btn-${props.id}`), { backgroundColor: "#4169E1", xPercent: 10})
-    .to(document.querySelector(`#exemple-btn-${props.id}`), { color: "white"}, '-=0.2')
-    .fromTo(document.querySelector(`#exemple-underline1-${props.id}`), {
+    .to(`#exemple-btn-${props.id}`, { backgroundColor: "#4169E1", xPercent: 10})
+    .to(`#exemple-btn-${props.id}`, { color: "white"}, '-=0.2')
+    .fromTo(`#exemple-underline1-${props.id}`, {
         width: "0%",
     }, {
         width: "50%",
         duration: 1, 
     }, '-=0.6')
-    .fromTo(document.querySelector(`#exemple-underline2-${props.id}`), {
+    .fromTo(`#exemple-underline2-${props.id}`, {
         width: "0%",
     }, {
         width: "50%",
         duration: 1, 
     }, '-=0.7')
-    .fromTo(document.querySelector(`#exemple-img2-${props.id}`), {
+    .fromTo(`#exemple-img2-${props.id}`, {
       opacity: 0,
     }, {
       opacity: 1,

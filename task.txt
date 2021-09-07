@@ -1,10 +1,12 @@
-Opti les gsap
+/ Opti les gsap
 
 Page portfolio Téléphone (iphone) pour montrer les applis
 Page portfolio mac bugé (a voir si cela continue)
 
-Service Worker continuer
+// Service Worker continuer (surtour le networkReponse)
 
 Header fond blanc
 
 Manifest faire le logo en 64x64
+
+Modifier les pictos

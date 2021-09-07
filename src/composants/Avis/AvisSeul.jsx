@@ -31,7 +31,7 @@ const AvisSeul = (props) => {
             duration: 1,
             scrollTrigger: {
                 trigger: document.querySelector(`#avis-container-${props.id}`),
-                start: 'top-=50 top+=400',
+                start: 'top-=100 top+=400',
                 end: 'bottom center',
                 toggleActions: 'play',
             }
@@ -46,7 +46,7 @@ const AvisSeul = (props) => {
           duration: 1,
           scrollTrigger: {
               trigger: document.querySelector(`#avis-container-${props.id}`),
-              start: 'top-=50 top+=400',
+              start: 'top-=100 top+=400',
               toggleActions: 'play',
           }
       })
