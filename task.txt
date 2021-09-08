@@ -12,3 +12,13 @@ Modifier les pictos
 Convertir png en webp
 
 Reduire les tailes d'image (pixel)
+
+Home refaire le texte de qui suis je
+
+Augmenter vitesse menu mobile
+
+Footer mobile centrer
+
+Séparation section home
+
+Rajouter l'avis de Bibi
