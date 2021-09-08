@@ -5,20 +5,16 @@ Page portfolio Téléphone (iphone) pour montrer les applis
 
 // Service Worker continuer (surtour le networkReponse)
 
-Header fond blanc
-
 Modifier les pictos
 
-Convertir png en webp
-
-Reduire les tailes d'image (pixel)
+Reduire les tailes d'image (pixel) && Convertir png en webp
 
 Home refaire le texte de qui suis je
 
 Augmenter vitesse menu mobile
 
-Footer mobile centrer
+/ Footer mobile centrer
 
 Séparation section home
 
-Rajouter l'avis de Bibi
+Continuer les avis

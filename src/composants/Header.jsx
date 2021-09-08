@@ -65,13 +65,16 @@ const Header = (props) => {
       }, {
         width: '100%',
         opacity: 1
-      })
+      }, 0.1)
       mRef.forEach((x) => {
         menuTl
         .fromTo(x.current, {
           scale: 0
         }, {
-          ...style
+          scale: 1,
+          duration: 0.25,
+          stagger: 0.1,
+          ease: 'back.out(1.7)'
         })
       })
       menuTl
@@ -87,7 +90,7 @@ const Header = (props) => {
     return (
       <div className="header-all">
         <div className="header">
-            <img href={ page === "accueil" ? "/" : null } src={logo} alt="logo-Edofo" width="75px" height="75px"/>
+            <a href={ page === "accueil" ? null : "/" }><img src={logo} alt="logo-Edofo" width="75px" height="75px"/></a>
             <div className="header-link header-pc">
               <li ref={aRef[0]}><a href="/" className={ page === "accueil" ? "link-active" : null }>Accueil</a></li>
               <li ref={aRef[1]}><a  href="avis" className={ page === "avis" ? "link-active" : null }>Avis</a></li>

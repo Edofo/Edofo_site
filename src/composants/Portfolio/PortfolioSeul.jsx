@@ -92,7 +92,7 @@ const PortfolioSeul = (props) => {
         props.website === false ?
           null
         :
-          <a href={props.website}><button onMouseEnter={() => Tl.play()} onMouseLeave={() => Tl.reverse()} id={idBtn}>Voir le site</button></a>
+          <a target="t_blank" href={props.website}><button onMouseEnter={() => Tl.play()} onMouseLeave={() => Tl.reverse()} id={idBtn}>Voir le site</button></a>
       }
     </div>
 

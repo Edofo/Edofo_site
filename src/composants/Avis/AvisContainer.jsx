@@ -9,34 +9,22 @@ const AvisContainer = () => {
 
     const listAvis = [
       {
-        client: "Rikka | Amis",
+        client: "Bertrand LESAUVAGE | Color Telecom",
         star: 5,
-        avis: "Je trouve le site que Edofo à réalisé pour son portfolio est tres ergonomique, facile de usage et plaisant à regardé ! Mais également les autres sites qu'il a pu réalisé",
+        avis: "Je suis agréablement surpris de la qualité des services que Nolan fournis. Je lui mets la note de 5 étoiles, il traite la demande rapidement et d'une très bonne qualité ! Je recommande ses services !",
+        website: "https://standardenligne.fr"
+      },
+      {
+        client: "Rooksaar | Amis",
+        star: 5,
+        avis: "Nolan est un élève en développement web très impliqué, qui à le sens du détail et qui apprend très vite, son site à été parfaitement réaliser en une seule année de dev web. Bravo à toi !",
         website: false
       },
       {
-        client: "Nom Client/Entreprise",
-        star: 2,
-        avis: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-        website: "https://exemple.com"
-      },
-      {
-        client: "Nom Client/Entreprise",
-        star: 3,
-        avis: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-        website: "https://exemple.com"
-      },
-      {
-        client: "Nom Client/Entreprise",
-        star: 4,
-        avis: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-        website: "https://exemple.com"
-      },
-      {
-        client: "Nom Client/Entreprise",
+        client: "Rikka | Amis",
         star: 5,
-        avis: "Je trouve que Nolan réalise des sites web de qualité en un temps record !",
-        website: "https://exemple.com"
+        avis: "Je trouve le site que Edofo a réalisé pour son portfolio est très ergonomique, facile d'usage et plaisant a regarder !",
+        website: false
       },
     ]
 

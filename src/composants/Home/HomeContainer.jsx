@@ -487,7 +487,7 @@ const HomeContainer = () => {
                   <div ref={start1} className="home-cat-text">
                     <h2>Qui suis-je ?</h2>
                     <span ref={underline1Ref} className="underline"></span>
-                    <p>Je me présente, je me nomme Nolan LEBOUCHER, j’ai {dateNow.getFullYear() - 2003} ans, je suis né le 18 décembre 2002 à Saint-Lô. Je suis actuellement en Bachelor Concepteur Développeur / Global Programming au sein de l'école d'ingénieurs Efrei situé à Villejuif. Je suis rigoureux, très calme, j’ai acquis une très bonne maîtrise de la langue Anglaise, ce qui est primordial pour les développeurs. Je suis assez logique car pour réussir son développement il faut réussir à faire preuve de réflexion et de logique. Je suis patient, je comprends vite ce que l’on me dit.</p>
+                    <p>Je me présente, je me nomme Nolan LEBOUCHER, j’ai {dateNow.getFullYear() - 2003} ans, je suis né le 18 décembre 2002 à Saint-Lô. Actuellement en Bachelor Concepteur Développeur / Global Programming au sein de l'école d'ingénieurs Efrei situé à Villejuif. Je suis rigoureux, très calme, j’ai acquis une très bonne maîtrise de la langue Anglaise, ce qui est primordial pour les développeurs. Je suis assez logique car pour réussir son développement il faut réussir à faire preuve de réflexion et de logique. Je suis patient, je comprends vite ce que l’on me dit.</p>
                     <span ref={underline1Ref2} className="underline2"></span>
                     <button onClick={() => window.location.replace('contact')} onMouseEnter={() => menuTl1.play()} onMouseLeave={() => menuTl1.reverse()} ref={btn1Ref}>Me contacter</button>
                   </div>

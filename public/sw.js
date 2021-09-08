@@ -1,7 +1,9 @@
 const BASE = location.protocol + "//" + location.host;
-const PREFIX = 'V1'
+const PREFIX = 'V2'
 const CACHED_FILES = [
     `${BASE}/assets/style.css`,
+
+    `${BASE}/logo512.png`
 ]
 
 self.addEventListener('install', (event) => {
